@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamWorld Verwaltung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>DreamWorld Buchverwaltung</h1>
+    
+    <h2>Buchbestände</h2>
+    <table id="bookTable">
+        <thead>
+            <tr>
+                <th>Titel</th>
+                <th>Autor</th>
+                <th>Preis</th>
+                <th>Anzahl</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamisch mit JavaScript befüllt -->
+        </tbody>
+    </table>
+
+    <h2>Neues Buch hinzufügen</h2>
+    <form id="addBookForm">
+        <label for="title">Titel:</label>
+        <input type="text" id="title" required>
+        <label for="author">Autor:</label>
+        <input type="text" id="author" required>
+        <label for="price">Preis:</label>
+        <input type="number" id="price" required>
+        <label for="quantity">Anzahl:</label>
+        <input type="number" id="quantity" required>
+        <button type="submit">Hinzufügen</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
