@@ -1,65 +1,108 @@
-/* Allgemeine Einstellungen */
+/* Reset grundlegender Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Körper-Layout */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #4CAF50, #81C784); /* Gradient-Hintergrund */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background-color: #f4f4f9;
+    overflow: hidden;
 }
 
+/* Container für das Login-Formular */
 .login-container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background: rgba(255, 255, 255, 0.9); /* Halbtransparenter Hintergrund */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Weiches Schatten-Design */
+    width: 100%;
+    max-width: 400px;
     text-align: center;
 }
 
-h1 {
-    color: #4CAF50;
+/* Logo */
+.logo {
+    width: 120px;
     margin-bottom: 20px;
+    border-radius: 50%;
 }
 
-.form-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-label {
-    display: block;
-    font-size: 14px;
+/* Headline Styling */
+h1 {
+    font-size: 1.8rem;
     color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Formular */
+.form-group {
+    margin-bottom: 20px;
 }
 
 input {
     width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
+input:focus {
+    border-color: #4CAF50;
+    background-color: #e8f5e9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
 button {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
+    padding: 15px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
+    font-size: 1.1rem;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #388E3C;
 }
 
+/* Fehlermeldung */
 .error-message {
     color: red;
     font-size: 14px;
     display: none;
-    margin-top: 10px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* Responsives Design */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 25px;
+    }
+    .logo {
+        width: 100px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    button {
+        font-size: 1rem;
+    }
 }
