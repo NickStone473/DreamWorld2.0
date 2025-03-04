@@ -46,17 +46,33 @@ h1 {
 /* Formular */
 .form-group {
     margin-bottom: 20px;
+    position: relative;
+}
+
+/* Eingabefelder mit Icons */
+.input-icon {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-icon span {
+    color: #4CAF50;
+    font-size: 20px;
+    margin-left: 10px;
 }
 
 input {
     width: 100%;
     padding: 15px;
     font-size: 1rem;
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    box-shadow: none;
+    padding-left: 10px;
 }
 
 input:focus {
